@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="connection.url">jdbc:hsqldb:hsql://localhost</property>
+        <property name="connection.username">sa</property>
+        <property name="connection.password"/>
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!--<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>-->
+        <!--<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JTATransactionFactory</property>-->
+        <!--<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JOTMTransactionManagerLookup</property>-->
+        <!--<property name="hibernate.transaction.factory_class">com.atomikos.icatch.jta.hibernate3.AtomikosJTATransactionFactory</property>-->
+        <!--<property name="hibernate.transaction.factory_class">org.hibernate.engine.transaction.internal.jta.CMTTransactionFactory</property>-->
+        
+        <!--<property name="hibernate.transaction.manager_lookup_class">org.hibernate.transaction.JBossTransactionManagerLookup</property>-->
+        <!--<property name="hibernate.transaction.manager_lookup_class">com.atomikos.icatch.jta.hibernate3.TransactionManagerLookup</property>-->
+        
+        <!--<property name="current_session_context_class">jta</property>-->
+        
+<!--        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JTATransactionFactory
+        </property>
+        
+        <property name="hibernate.transaction.manager_lookup_class">org.hibernate.transaction.JBossTransactionManagerLookup
+        </property>-->
+
+        
+        <!--<mapping resource="ru/roseurobank/hibernateinheritance/Event.hbm.xml"/>-->
+        <!--<mapping resource="ru/roseurobank/hibernateinheritance/Person.tablePerSubclass.hbm.xml"/>-->
+        <!--<mapping resource="ru/roseurobank/hibernateinheritance/Person.tablePerClassHierarchy.hbm.xml"/>-->
+        
+        <!--    <mapping class="ru.roseurobank.hibernateinheritance.Person" />
+        <mapping class="ru.roseurobank.hibernateinheritance.Employee" />
+        <mapping class="ru.roseurobank.hibernateinheritance.Owner" />-->
+        
+        <!--        <mapping class="ru.roseurobank.hibernateinheritance.BillingDetailsTPS" />
+        <mapping class="ru.roseurobank.hibernateinheritance.BankAccountTPS" />
+        <mapping class="ru.roseurobank.hibernateinheritance.CreditCardTPS" />        -->
+        
+        <!--        <mapping class="ru.roseurobank.hibernateinheritance.Users" />
+        <mapping class="ru.roseurobank.hibernateinheritance.Role" />      -->
+                
+        <!--        <mapping class="ru.roseurobank.hibernateinheritance.BillingDetailsTPCH" />
+        <mapping class="ru.roseurobank.hibernateinheritance.BankAccountTPCH" />
+        <mapping class="ru.roseurobank.hibernateinheritance.CreditCardTPCH" />-->
+
+        <!--        <mapping class="ru.roseurobank.hibernateinheritance.BillingDetailsTPCCwithU" />
+        <mapping class="ru.roseurobank.hibernateinheritance.BankAccountTPCCwithU" />
+        <mapping class="ru.roseurobank.hibernateinheritance.CreditCardTPCCwithU" />-->
+        
+        <!--        <mapping class="ru.roseurobank.hibernateinheritance.BillingDetailsTPCCwithIP" />
+        <mapping class="ru.roseurobank.hibernateinheritance.BankAccountTPCCwithIP" />
+        <mapping class="ru.roseurobank.hibernateinheritance.CreditCardTPCCwithIP" />-->
+        
+        <!--        <mapping class="ru.roseurobank.hibernateinheritance.BillingDetailsMix" />
+        <mapping class="ru.roseurobank.hibernateinheritance.BankAccountMix" />
+        <mapping class="ru.roseurobank.hibernateinheritance.CreditCardMix" />-->
+        
+<!--        <mapping class="ru.roseurobank.collections.OrderSet" />
+        <mapping class="ru.roseurobank.collections.CustomerSet" />-->
+        
+<!--        <mapping class="ru.roseurobank.collections.CustomerComponent" />
+        <mapping class="ru.roseurobank.collections.Address" />-->
+        
+        <mapping class="ru.roseurobank.collections.CustomerOTO" />
+        <mapping class="ru.roseurobank.collections.AddressOTO" />
+        
+<!--        <mapping class="ru.roseurobank.collections.CustomerMTM" />
+        <mapping class="ru.roseurobank.collections.AddressMTM" />-->
+        
+    </session-factory>
+</hibernate-configuration>
