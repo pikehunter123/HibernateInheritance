@@ -1,0 +1,4 @@
+HibernateInheritance
+====================
+
+HibernateInheritance
